@@ -1,0 +1,37 @@
+#include <Wire.h>
+#include <U8g2lib.h>
+
+// Initialize the display for SSD1309 with I2C
+U8G2_SSD1309_128X64_NONAME0_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);  
+
+void setup() {
+  u8g2.begin();            // Initialize the display
+}
+
+void loop() {
+  u8g2.clearBuffer();      // Clear display buffer
+  u8g2.setFont(u8g2_font_ncenB08_tr);  // Set a font
+  u8g2.drawStr(0, 10, "Speed =");  // Draw a string at coordinates (0, 10)
+
+  // store speed in variable
+
+  //stdd::string speed = std::to_string(50);
+  //std::string displayString = speed + "m/s";
+
+  //u8g2.drawStr(50, 10, displayString.c_str());  
+  u8g2.drawStr(0, 30, "Battery =");
+
+  // battery graphic
+  u8g2.drawFrame(0, 35, 40, 15);
+  u8g2.drawBox(40, 38, 2, 8); 
+
+  // fake battery level
+  u8g2.drawBox(2, 37, 30, 11); // turn width (3 position) in to variable
+
+
+  // u8g2.drawBox(10, 20, 20, 20);  // Draw a box at (10, 20) with width 20 and height 20
+  // u8g2.drawCircle(64, 32, 15);   // Draw a circle centered at (64, 32) with radius 15
+
+  u8g2.sendBuffer();        // Send buffer to the display
+  delay(1000);              // Delay for readability
+}

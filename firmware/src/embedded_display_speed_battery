@@ -15,11 +15,21 @@ void loop() {
 
   // store speed in variable
 
-  //stdd::string speed = std::to_string(50);
-  //std::string displayString = speed + "m/s";
+  // stdd::string speed = std::to_string(50);
+  // std::string displayString = speed + "m/s";
+
+  int speed = 50;  // Speed value (integer)
+  String displayStringSpeed = String(speed) + " m/s";  // Convert speed to a String and add the unit
+
+  u8g2.drawStr(50, 10, displayStringSpeed.c_str());
 
   //u8g2.drawStr(50, 10, displayString.c_str());  
   u8g2.drawStr(0, 30, "Battery =");
+  
+  int battery = 80;  // Speed value (integer)
+  String displayStringBattery = String(battery) + " %";  // Convert speed to a String and add the unit
+
+  u8g2.drawStr(55, 30, displayStringBattery.c_str());
 
   // battery graphic
   u8g2.drawFrame(0, 35, 40, 15);

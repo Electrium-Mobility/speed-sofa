@@ -15,9 +15,6 @@ void loop() {
 
   // store speed in variable
 
-  // stdd::string speed = std::to_string(50);
-  // std::string displayString = speed + "m/s";
-
   int speed = 50;  // Speed value (integer)
   String displayStringSpeed = String(speed) + " m/s";  // Convert speed to a String and add the unit
 

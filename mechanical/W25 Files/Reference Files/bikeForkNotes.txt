@@ -1,0 +1,4 @@
+Bike bearings are EC34:
+-> fork outer diameter 1 1/8 inches
+-> 30mm outer diameter at bottom
+-> inside diameter of head tube < 34mm , often 33.9. At least 10mm of this size before getting smaller
